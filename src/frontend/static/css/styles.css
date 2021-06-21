@@ -11,15 +11,15 @@ main {
 
 
 .colorFondo{
-    background-color: rgb(189, 104, 104);
+    background-color: rgb(118, 95, 252);
        
 }
 .nombreDisp{
     font-size: 25px;
-    color: rgb(161, 48, 48);
+    color: rgb(3, 5, 121);
 }
 
 .switch label .lever {
-    width: 100px ;
+    width: 40px ;
 }
 

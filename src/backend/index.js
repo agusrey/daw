@@ -42,6 +42,22 @@ app.post('/devices/', function(req, res) {
 });
 
 
+app.post('/afecta_state/', function(req, res) {
+    let id = req.body.id;
+    let state=req.body.state;
+    datos[id].state=state;
+    res.json(datos[id]);
+});
+
+app.post('/delete/', function(req, res) {
+    let id = req.body.id;
+    let device_eliminado = datos.splice(id,1);
+    res.json(device_eliminado);
+});
+
+
+
+
 //=======[ Main module code ]==================================================
 app.listen(PORT, function(req, res) {
     console.log("NodeJS API running correctly");
