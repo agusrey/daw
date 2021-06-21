@@ -9,9 +9,9 @@
     <body>
         <main>
             <!-- Navigation bar -->
-            <nav style="background-color:#124580">
+            <nav class="colorFondo" >
                 <div class="nav-wrapper">
-                    <a href="#!" class="brand-logo left" style="margin-left: 15px;">Smart Home</a>
+                    <a href="#!" class="brand-logo left" style="margin-left: 15px;">Control de Dispositivos</a>
                     <ul id="nav-mobile" class="right" style="margin-right: 15px;">
                         <li><a href="#">Help</a></li>
                     </ul>
@@ -20,25 +20,33 @@
             <!-- Page Body -->
             <div class="container">
                 <br/>
-                <h3>Smart Home Web Client!</h3>
+                <h3>Casa Inteligente</h3>
                 <br/>
                 <div class="row">
-                    <div class="input-field col s12 m12 l12 xl12">
-                        <textarea id="textarea_1" class="materialize-textarea" style="height: 150px;" readonly></textarea>
+                    <div class="col l2 s12 m12">
+                        <a id="modNuevo" class="waves-effect waves-light modal-trigger btn" href="#modal1">Nuevo</a>
                     </div>
-                    <div class="col s4 m4 l2 xl2">
-                        <button class="btn waves-effect waves-light button-view" onclick="SayHello();" name="hello_button">PRESS ME</button>
-                    </div>
+                </div>
+                <div class="row">
+                <div class="col l7 s7 m7">
+
+                    <p id="lista"></p>
+                    <ul id="listaDisp" class="collection">
+                    </ul>
+                </div>
+                </div>
+                <div class="input-field col s12 m12 l12 xl12">
+                    <textarea id="textarea_1" class="materialize-textarea" style="height: 150px;" readonly></textarea>
                 </div>
             </div>	
         </main>
 		<!-- Page Footer -->
-        <footer class="page-footer" style="background-color:#124580">
+        <footer class="page-footer colorFondo" >
             <div class="container">
                 <div class="row">
                     <div class="col l6 s6">
-                        <h5 class="white-text">Smart Home</h5>
-                        <p class="grey-text text-lighten-4">Copyright ### - 2021</p>
+                        <h5 class="white-text">TP DAW</h5>
+                        <p class="grey-text text-lighten-4">Copyright Agustin Rey - 2021</p>
                     </div>
                     <div class="col l6 s6">
                         <h5 class="white-text right-align">Contact</h5>
@@ -52,7 +60,10 @@
             </div>
         </footer>
 		<!--JavaScript at end of body for optimized loading-->
-		<script type="text/javascript" src="js/materialize.min.js"></script>
+		<script type="text/javascript" src="./static/js/materialize.min.js"></script>
+        <script type="text/javascript" src="js/MyFramework.js"></script>
+
 		<script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/user.js"></script>
     </body>
   </html>

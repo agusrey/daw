@@ -1,0 +1,10 @@
+[
+    { "id": 1, "name": "Lámpara 1", "description": "Luz Living", "state": 1, "type": 0 },
+    { "id": 2, "name": "Lámpara 2", "description": "Luz Cocina", "state": 0, "type": 1 },
+    { "id": 3, "name": "Velador 1", "description": "Velador Living", "state": 1, "type": 2 },
+    { "id": 4, "name": "Velador 2", "description": "Velador Dormitorio", "state": 1, "type": 3 },
+    { "id": 5, "name": "Persiana 1","description": "Persiana Living","state": 1,"type": 4},
+    { "id": 6, "name": "Persiana 2","description": "Persiana Cocina","state": 0,"type": 4},
+    { "id": 7, "name": "Persiana 3","description": "Persiana Balcón","state": 1,"type": 4}
+  
+]

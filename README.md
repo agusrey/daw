@@ -1,6 +1,9 @@
-<a href="https://www.gotoiot.com/">
-    <img src="doc/gotoiot-logo.png" alt="logo" title="Goto IoT" align="right" width="60" height="60" />
-</a>
+Trabajo práctico de Desarrollo de Aplicaciones Web
+
+Esta es la primera versión del trabajo práctico final de la materia Desarrollo de Aplicaciones Web de la Maestría de Internet de las cosas.
+
+# Instalación
+1) 
 
 Web App Full Stack Base
 =======================
