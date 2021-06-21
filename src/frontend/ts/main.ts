@@ -5,16 +5,16 @@ class Main implements EventListenerObject, HandlerPost{
         this.myFramework = new MyFramework();
      
     }
-    
+    // Manejador de eventos
+
     public handleEvent(ev: Event) {
 
         let objetoEv: HTMLInputElement = <HTMLInputElement>ev.target;
         let tipoEvento:string = ev.type;
         let tipoElemento:string = objetoEv.type;
-        alert("evento tipo " + tipoEvento + "de un elemento " + tipoElemento);
+        //alert("evento tipo " + tipoEvento + " de un elemento " + tipoElemento + " valor= "+  objetoEv.value);
         
         if(tipoElemento == "checkbox"){   //aca tenemos un evento de un on/off, hace un post para afectar el json
-            alert("datos: " +  objetoEv.id + " " + objetoEv.checked) + " " + objetoEv.value;
             let valor:number = 0;
             if(objetoEv.checked==true){
                 valor=1;
@@ -24,27 +24,28 @@ class Main implements EventListenerObject, HandlerPost{
             this.myFramework.requestPOST("http://localhost:8000/afecta_state", this, datos);
         }
         if(tipoEvento == "change"){   //aca tenemos un evento de un dimmer, idem
-            alert("datos: " +  objetoEv.id + " " + objetoEv.value);
             let id=parseInt(objetoEv.id.substring(4))-1;
             let datos = {"id":id, "state":objetoEv.value};
             this.myFramework.requestPOST("http://localhost:8000/afecta_state", this, datos);
-
-
         }
 
         if(tipoElemento == "editBtn"){   //aca tenemos un evento de un botón de edicion, hay que determinar de cual dispositivo
+            //TODO            
+                alert("A implementar mas adelante");
+            }
+        if(tipoElemento == "modNuevo"){   //aca tenemos un evento del botón de nuevo dispositivo
+                //TODO            
+                    alert("A implementar mas adelante");
+                
+                }
             
-        }
-
         if(tipoElemento == "deleteBtn"){   //aca tenemos un evento de un boton de borrado, hay que determinar de cual dispositivo
-            alert("datos: " +  objetoEv.id + " " + objetoEv.value);
             let id=parseInt(objetoEv.id.substring(10))-1;
             let datos = {"id":id};
             if(this.ConfirmBox()){
                 this.myFramework.requestPOST("http://localhost:8000/delete", this, datos);
                 location.reload();
             }
-            
         }
         
     }
@@ -183,6 +184,9 @@ window.addEventListener("load", ()=> {
     let miObjMain: Main = new Main();
     miObjMain.main();
     miObjMain.despliegaListaDisp();
+    let nuevoDisp: HTMLElement = miObjMain.myFramework.getElementById("modNuevo");
+    nuevoDisp.addEventListener("click", miObjMain);
+
 });
 
 
