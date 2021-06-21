@@ -17,10 +17,10 @@ En este repo se encuentra los archivos de la aplicación web https://github.com/
 
 3) Ejecutar el comando docker-compose up
 Al ejecutarse este comando, Docker Compose descarga las imágenes de los contenedores que están especificadas en docker-compose.yml e iniciará los servicios. En este caso en particular las imágenes descargadas son:
-    Compilador typescript: harmish/typescript
-    Base de datos:  mysql:5.7
-    PHP:    phpmyadmin/phpmyadmin
-    NodeJS: abassi/nodejs-server:10.0-dev
+-    Compilador typescript: harmish/typescript
+-    Base de datos:  mysql:5.7
+-    PHP:    phpmyadmin/phpmyadmin
+-    NodeJS: abassi/nodejs-server:10.0-dev
 
 4) Para llamar a la aplicación abrir un navegador (por ejemplo Chrome) y abrir la url http://localhos:8000
 
@@ -31,11 +31,11 @@ En el Backend se utilizó NodeJs que es un motor de ejecución de código JavaSc
 
 Al abrir la url, el Frontend despliega una lista de dispositivos. El archivo device.ts contiene el array JSon con los dispositivos y sus características. Los datos se recuperan con la ayuda de la biblioteca NodeJS y un comando HTTP del tipo GET.
 En esta implementación se caracterizaron 5 tipos de dispositivos:
-    0: Lámpara tipo on/off 
-    1: Lámpara dimerizable
-    2: Velador tipo on/off
-    3: Velador dimerizable
-    4: Persiana regulable
+-    0: Lámpara tipo on/off 
+-    1: Lámpara dimerizable
+-    2: Velador tipo on/off
+-    3: Velador dimerizable
+-    4: Persiana regulable
 En la lista se observa el ícono y el control correspondiente (on/off o deslizable) según el tipo de dispositivo.
 
 Al actuar sobre el control se puede encender o apagar (on/off) o definir el porcentaje de accionamiento entre 0 y 100%. El nuevo valor se envía mediante un comando HTTP del tipo POST a los distintos endpoints para que el backend los almacene en la memoria. Si bien se podía persistir la información con mysql, no se utilizó dado que es un tema que aún no se trató en la maestría. Se muestra en pantalla el respose del Post con el JSon del dispositivo actualizado.
