@@ -3,7 +3,7 @@ Trabajo práctico de Desarrollo de Aplicaciones Web
 
 Esta es la primera versión del trabajo práctico final de la materia Desarrollo de Aplicaciones Web de la Maestría de Internet de las cosas.
 
-Este trabajo toma como base lo publicado por Agustín Bassi en la página www.gotoiot.com respecto de una aplicación web full-stack.
+Este trabajo toma como base lo publicado por Agustín Bassi en la página www.gotoiot.com respecto de una aplicación web full-stack, y de las distintas ramas generadas en las clases de la materia.
 
 La aplicación funciona dentro de un contenedor Docker, por lo que será necesario instalar Docker. También será necesario instalar Docker compose, que es una herramienta para manejar múltiples contenedores Docker, nos permite configurar las variables de entorno y desplegar el funcionamiento de varios contenedores en simultáneo según lo especificado en el archivo de texto docker-compose.yml .
 
